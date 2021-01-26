@@ -145,7 +145,7 @@ void wizualizacja2(maciora *m, int x, int y, int pole, char kierunek_lufy)
     }
 
     m->my_c = y + m->min_c - 1; //teraz to zamieniałem 00:15 26.02.2021
-    m->my_r = y + m->min_r - 1;
+    m->my_r = x + m->min_r - 1;
 
     if (kierunek_lufy == 'S') //S-1,W-2,N-3,E-4
         m->zwrot_lufy = 1;
@@ -172,6 +172,6 @@ void uzupelnienie_info(Dane *odczyt, maciora *plansza)
 {
     wizualizacja2(plansza, odczyt->x[0], odczyt->y[0], odczyt->field[0], odczyt->kierunek_lufy);
     pokaz_macierz(plansza);
-    plansza->my_c = odczyt->website_x;
-    plansza->my_r = odczyt->website_y;
+    //plansza->my_c = odczyt->website_x;
+    //plansza->my_r = odczyt->website_y;
 }

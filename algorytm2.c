@@ -162,18 +162,21 @@ int go_aroud(maciora *m, Dane *D, char *tok)
     {
         move(tok, m, D);
         explore(tok, m, D);
+        info(tok, m, D);
     }
     if (check_front(m, D) == 2)
     {
         move(tok, m, D);
         rotate(tok, "left",m, D);
         explore(tok, m, D);
+        info(tok, m, D);
     }
     if (check_front(m, D) == 3)
     {
         rotate(tok, "right",m, D);
         move(tok, m, D);
         explore(tok, m, D);
+        info(tok, m, D);
     }
     if (check_front(m, D) == 4)
     {
@@ -181,6 +184,7 @@ int go_aroud(maciora *m, Dane *D, char *tok)
         rotate(tok, "right",m, D);
         move(tok, m, D);
         rotate(tok, "right",m, D);
+        info(tok, m, D);
     }
 }
 
@@ -237,7 +241,10 @@ void make_fram(maciora *m, Dane *D, char *tok)
 
 void algorytm_ruchu2(maciora*m,Dane*D,char*tok)
 {
-    while (check_border(m)!=1) 
+
+    info(tok,m,D);
+    printf("my c  my r  %d  %d",m->my_c , m->my_r);
+    /*while (check_border(m)!=1) 
     { ;     
         info(tok,m,D);
         explore(tok,m,D);
@@ -247,12 +254,13 @@ void algorytm_ruchu2(maciora*m,Dane*D,char*tok)
             while (can_I_go(m)==1)
             {
                 move(tok,m,D);
+                info(tok,m,D);
                 explore(tok,m,D);
             } 
                 make_fram(m,D,tok);
     printf ("gotowe");
     }
-    }
+    }*/
 }
   
  /// łabądź 690224936

@@ -3,12 +3,14 @@
 maciora *utworz_poczatek()
 {
     maciora *m = (maciora *)malloc(sizeof(maciora));
-    m->r = 11;
-    m->c = 11;
-    m->plus_r = 9;
-    m->plus_c = 9;
+    m->r = 20;
+    m->c = 20;
+    m->plus_r =18;
+    m->plus_c = 18;
     m->min_r = 2;
     m->min_c = 2;
+    m->my_c = 0;
+    m->my_r = 0;
     m->tab = (int **)calloc(m->r, sizeof(int *));
     for (int i = 0; i < m->r; i++)
         m->tab[i] = (int *)calloc(m->c, sizeof(int));
