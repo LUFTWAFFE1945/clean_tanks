@@ -64,9 +64,7 @@ Dane *interpret_response(const char *const chunk, Dane *w)
             w->y[0] = current_x->valueint;
             w->x[0] = current_y->valueint;
             w->field[0] = decode_type(field_type->valuestring);
-            w->kierunek_lufy = direction->valuestring[0];
-            w->website_y = current_y->valueint;
-            w->website_x = current_x->valueint;
+            w->kierunek_lufy = direction->valuestring[0];          
         }
     }
     return w;

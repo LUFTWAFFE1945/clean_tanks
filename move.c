@@ -3,6 +3,7 @@
 
 char *explore(char *token, maciora *p, Dane *z)
 {
+    printf("robie wexplore\n");
     char *url = (char *)malloc(sizeof(char) * 1024);
     strcpy(url, "http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/explore");
     strcat(url, "/");
@@ -13,6 +14,7 @@ char *explore(char *token, maciora *p, Dane *z)
 
 char *info(char *token, maciora *p, Dane *z)
 {
+    printf("robie info\n");
     char *url = (char *)malloc(sizeof(char) * 1024);
     strcpy(url, "http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/info");
     strcat(url, "/");

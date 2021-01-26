@@ -13,7 +13,18 @@ void pokaz_macierz(maciora *m)
                 printf("\n");
         }
 }
-
+void pokaz_macierz_jak_jest(maciora*m)
+{
+    printf("ina kuba \n");
+    printf("Ogólne r:%d     Ogólne c:%d\n", m->r, m->c);
+    for (int i =0; i < m->r + 1; i++)
+        for (int j = 0; j < m->c; j++)
+        {
+            printf("%d\t", m->tab[i][j]);
+            if (j + 1 == m->c)
+                printf("\n");
+        }
+}
 void przesun_prawo(maciora *m)
 {
 

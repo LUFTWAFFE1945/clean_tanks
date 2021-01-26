@@ -241,14 +241,14 @@ void make_fram(maciora *m, Dane *D, char *tok)
 
 void algorytm_ruchu2(maciora*m,Dane*D,char*tok)
 {
-
+    printf("rozpoczynam alorytm ruchu)\n");
     info(tok,m,D);
     printf("my c  my r  %d  %d",m->my_c , m->my_r);
     while (check_border(m)!=1) 
     {     
         info(tok,m,D);
         explore(tok,m,D);
-        pokaz_macierz(m);
+        pokaz_macierz_jak_jest(m);
         while (sprawdz_wypelnione(m)==0) 
         { 
             while (can_I_go(m)==1)

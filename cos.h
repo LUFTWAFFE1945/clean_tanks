@@ -70,6 +70,7 @@ int go_aroud(maciora *m, Dane *D, char *tok);
 int have_you_been_here(maciora *m);
 void make_fram(maciora *m, Dane *D, char *tok);
 void algorytm_ruchu2(maciora *m, Dane *D, char *tok);
+void pokaz_macierz_jak_jest(maciora*m);
 
 Dane *interpret_response(const char *const chunk, Dane *dane);
 char *make_request(char *url);

@@ -3,10 +3,10 @@
 maciora *utworz_poczatek()
 {
     maciora *m = (maciora *)malloc(sizeof(maciora));
-    m->r = 20;
-    m->c = 20;
-    m->plus_r = 18;
-    m->plus_c = 18;
+    m->r =12;
+    m->c = 12;
+    m->plus_r = 10;
+    m->plus_c =10;
     m->min_r = 2;
     m->min_c = 2;
     m->my_c = 0;
