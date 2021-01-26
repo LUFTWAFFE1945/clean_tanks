@@ -244,8 +244,8 @@ void algorytm_ruchu2(maciora*m,Dane*D,char*tok)
 
     info(tok,m,D);
     printf("my c  my r  %d  %d",m->my_c , m->my_r);
-    /*while (check_border(m)!=1) 
-    { ;     
+    while (check_border(m)!=1) 
+    {     
         info(tok,m,D);
         explore(tok,m,D);
         pokaz_macierz(m);
@@ -260,7 +260,7 @@ void algorytm_ruchu2(maciora*m,Dane*D,char*tok)
                 make_fram(m,D,tok);
     printf ("gotowe");
     }
-    }*/
+}
 }
   
  /// łabądź 690224936

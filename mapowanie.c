@@ -128,19 +128,17 @@ void wizualizacja(maciora *m, int x, int y, int pole, char kierunek_lufy)
 void wizualizacja2(maciora *m, int x, int y, int pole, char kierunek_lufy)
 {
     ewentualna_realokacja(m, x, y);
+
     if (pole == 1)
     { // ŚCIANA- 1  TRAWA-2  PIACH-3[r][c]
-        m->tab2[x + m->min_r - 1][y + m->min_c - 1] = 1;
         m->tab[x + m->min_r - 1][y + m->min_c - 1] = 1;
     }
     if (pole == 2)
     {
-        m->tab2[x + m->min_r - 1][y + m->min_c - 1] = 1;
         m->tab[x + m->min_r - 1][y + m->min_c - 1] = 2;
     }
     if (pole == 3)
     {
-        m->tab2[x + m->min_r - 1][y + m->min_c - 1] = 1;
         m->tab[x + m->min_r - 1][y + m->min_c - 1] = 3;
     }
 
@@ -171,6 +169,7 @@ void uzupelnienie_explore(Dane *odczyt, maciora *plansza)
 void uzupelnienie_info(Dane *odczyt, maciora *plansza)
 {
     wizualizacja2(plansza, odczyt->x[0], odczyt->y[0], odczyt->field[0], odczyt->kierunek_lufy);
+
     pokaz_macierz(plansza);
     //plansza->my_c = odczyt->website_x;
     //plansza->my_r = odczyt->website_y;

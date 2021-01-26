@@ -5,7 +5,7 @@ maciora *utworz_poczatek()
     maciora *m = (maciora *)malloc(sizeof(maciora));
     m->r = 20;
     m->c = 20;
-    m->plus_r =18;
+    m->plus_r = 18;
     m->plus_c = 18;
     m->min_r = 2;
     m->min_c = 2;
@@ -14,10 +14,6 @@ maciora *utworz_poczatek()
     m->tab = (int **)calloc(m->r, sizeof(int *));
     for (int i = 0; i < m->r; i++)
         m->tab[i] = (int *)calloc(m->c, sizeof(int));
-
-    m->tab2 = (int **)calloc(m->r, sizeof(int *));
-    for (int i = 0; i < m->r; i++)
-        m->tab2[i] = (int *)calloc(m->c, sizeof(int));
 
     return m;
 }
@@ -80,11 +76,7 @@ void zapisz_do_pliku(maciora *m, char *nazwa_pliku)
 void zwolnij_macierz(maciora *m)
 {
     for (int i = 0; i < m->r; i++)
-    {
         free(m->tab[i]);
-        free(m->tab2[i]);
-    }
-    free(m->tab2);
     free(m->tab);
     free(m);
 }
